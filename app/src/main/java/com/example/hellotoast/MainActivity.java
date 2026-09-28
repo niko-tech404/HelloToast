@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity {
         nCount++;
         nShowCount.setText(Integer.toString(nCount));
     }
+
+    public void countDown(View view) {
+        nCount--;
+        nShowCount.setText(Integer.toString(nCount));
+    }
 }
