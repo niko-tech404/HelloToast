@@ -5,4 +5,6 @@
     <string name="count_initial_value">0</string>
     <string name="botton_label_countUp">Increment</string>
     <string name="botton_label_countDown">Decrement</string>
+    <string name="decrement_text_button">Decrement</string>
+    <string name="increment_text_button">Increment</string>
 </resources>

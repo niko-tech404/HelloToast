@@ -41,14 +41,14 @@
                     android:layout_width="150dp"
                     android:layout_height="40dp"
                     android:onClick="countUp"
-                    android:text="Increment" />
+                    android:text="@string/increment_text_button" />
 
                 <Button
                     android:id="@+id/button_countDown"
                     android:layout_width="150dp"
                     android:layout_height="40dp"
                     android:onClick="countDown"
-                    android:text="Decrement" />
+                    android:text="@string/decrement_text_button" />
             </LinearLayout>
 
     </LinearLayout>
