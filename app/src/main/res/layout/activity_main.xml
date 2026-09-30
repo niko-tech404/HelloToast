@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,13 +9,14 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayoutContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <Button
             android:id="@+id/button_toast"
@@ -26,30 +28,33 @@
             android:id="@+id/show_count"
             android:layout_width="match_parent"
             android:layout_height="110dp"
+            android:gravity="center"
             android:text="@string/count_initial_value"
-            android:textSize="@dimen/count_text_size"
-            tools:ignore="SpUsage" />
+            android:textSize="@dimen/count_text_size" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="79dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/button_countUp"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:onClick="countUp"
-                    android:text="@string/increment_text_button" />
+            <Button
+                android:id="@+id/button_countUp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:onClick="countUp"
+                android:text="@string/increment_text_button" />
 
-                <Button
-                    android:id="@+id/button_countDown"
-                    android:layout_width="150dp"
-                    android:layout_height="40dp"
-                    android:onClick="countDown"
-                    android:text="@string/decrement_text_button" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/button_countDown"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:onClick="countDown"
+                android:text="@string/decrement_text_button" />
+        </LinearLayout>
 
     </LinearLayout>
 
